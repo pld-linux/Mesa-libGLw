@@ -22,6 +22,8 @@ BuildRequires:	automake
 BuildRequires:	libtool
 %{?with_motif:BuildRequires:	motif-devel}
 BuildRequires:	pkgconfig
+BuildRequires:	tar >= 1:1.22
+BuildRequires:	xz
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-lib-libXt-devel
