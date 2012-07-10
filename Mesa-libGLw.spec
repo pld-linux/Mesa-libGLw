@@ -6,15 +6,13 @@
 Summary:	SGI OpenGL Xt widgets library
 Summary(pl.UTF-8):	Biblioteka SGI widgetów Xt dla OpenGL-a
 Name:		Mesa-libGLw
-Version:	1.0.0
-%define	snap	20120116
-Release:	0.%{snap}.1
+Version:	8.0.0
+Release:	1
 Epoch:		1
 License:	SGI MIT-like
 Group:		X11/Libraries
-# git clone git://anongit.freedesktop.org/git/mesa/glw mesa-glw
-Source0:	mesa-glw.tar.xz
-# Source0-md5:	ffe670e257fd0ec1acda9e978a221318
+Source0:	ftp://ftp.freedesktop.org/pub/mesa/glw/glw-%{version}.tar.bz2
+# Source0-md5:	b29b8b5481b8cbc839cb02c324bdabd9
 URL:		http://www.mesa3d.org/
 BuildRequires:	OpenGL-devel >= 1.2
 BuildRequires:	autoconf >= 2.50
@@ -22,8 +20,6 @@ BuildRequires:	automake
 BuildRequires:	libtool
 %{?with_motif:BuildRequires:	motif-devel}
 BuildRequires:	pkgconfig
-BuildRequires:	tar >= 1:1.22
-BuildRequires:	xz
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-lib-libXt-devel
@@ -68,7 +64,7 @@ Static SGI libGLw library.
 Statyczna biblioteka SGI libGLw.
 
 %prep
-%setup -q -n mesa-glw
+%setup -q -n glw-%{version}
 
 %build
 %{__libtoolize}
