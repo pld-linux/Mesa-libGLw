@@ -7,12 +7,14 @@ Summary:	SGI OpenGL Xt widgets library
 Summary(pl.UTF-8):	Biblioteka SGI widgetów Xt dla OpenGL-a
 Name:		Mesa-libGLw
 Version:	8.0.0
-Release:	1
+Release:	2
 Epoch:		1
 License:	SGI MIT-like
 Group:		X11/Libraries
 Source0:	ftp://ftp.freedesktop.org/pub/mesa/glw/glw-%{version}.tar.bz2
 # Source0-md5:	b29b8b5481b8cbc839cb02c324bdabd9
+Patch0:		glw-git.patch
+Patch1:		glw-include.patch
 URL:		http://www.mesa3d.org/
 BuildRequires:	OpenGL-devel >= 1.2
 BuildRequires:	autoconf >= 2.50
@@ -65,6 +67,8 @@ Statyczna biblioteka SGI libGLw.
 
 %prep
 %setup -q -n glw-%{version}
+%patch0 -p1
+%patch1 -p1
 
 %build
 %{__libtoolize}
