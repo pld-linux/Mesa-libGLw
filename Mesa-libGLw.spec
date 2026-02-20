@@ -7,7 +7,7 @@ Summary:	SGI OpenGL Xt widgets library
 Summary(pl.UTF-8):	Biblioteka SGI widgetów Xt dla OpenGL-a
 Name:		Mesa-libGLw
 Version:	8.0.0
-Release:	3
+Release:	4
 Epoch:		1
 License:	SGI MIT-like
 Group:		X11/Libraries
